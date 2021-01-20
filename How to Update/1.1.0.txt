@@ -1,0 +1,27 @@
+How to update from phpSearch v1.0.0 to v1.1.0
+----------------------------------------------------------------------------
+---------------------------------- FTP -------------------------------------
+Upload and replace the following files on your server:
+
+/app/models/Admin.php
+/app/controllers/web.php
+/app/includes/info.php
+/app/languages/english.php
+/app/libraries/HexConverter.php
+
+/public/themes/search/assets/css/style.css
+/public/themes/search/views/web/ia/base64.php
+/public/themes/search/views/web/ia/hex_color.php
+/public/themes/search/views/web/ia/md5.php
+/public/themes/search/views/web/ia/reverse_text.php
+/public/themes/search/views/web/ia/sort.php
+
+----------------------------------------------------------------------------
+--------------------------------- Changelog --------------------------------
+- Added new Instant Answer (Hex Color): "#009C5E"
+- Added new Instant Answer (Sort numbers): "sort ascending 5, 1, 3"
+- Added new Instant Answer (MD5 hashing): "md5 example"
+- Added new Instant Answer (base64 encode/decode): "base64 encode example"
+- Added new Instant Answer (Reverse text): "reverse text example"
+- Fixed the Admin Password not updating when being changed
+- Other minor improvements

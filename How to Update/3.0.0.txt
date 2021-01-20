@@ -1,0 +1,34 @@
+How to update from phpSearch v2.0.0 to v3.0.0
+----------------------------------------------------------------------------
+--------------------------------- MySQL ------------------------------------
+Log-in into phpMyAdmin (or your MySQL database) and on the SQL tab run the following queries:
+
+UPDATE `settings` SET `value` = 10 WHERE `name` = 'videos_per_page';
+
+INSERT INTO `settings` (`name`, `value`) VALUES ('site_backgrounds', '1'), ('site_dark_mode', '0'), ('site_center_content', '0'), ('search_safe_search', 'Moderate'), ('search_new_window', '0'), ('search_highlight', 'false'), ('favicon', 'favicon.png'), ('logo_small', 'logo_small.svg'), ('logo_small_dark', 'logo_small_dark.svg'), ('logo_large', 'logo_large.svg'), ('logo_large_dark', 'logo_large_dark.svg'), ('search_entities', 1);
+
+----------------------------------------------------------------------------
+---------------------------------- FTP -------------------------------------
+1. Make a back-up of /app/includes/config.php file.
+2. Re-upload all the files & folders
+3. Set CHMOD 777, 775 or 755 to /public/uploads/ and its subfolders
+4. Restore the credentials from your old config.php file to the new config.php.
+
+Or do a clean install.
+
+----------------------------------------------------------------------------
+------------------------------- CHANGELOG ----------------------------------
+- Added Home page backgrounds support
+- Added Entity for the Web Results (sidebar)
+- Added new Instant Answer (atbash): "atbash example"
+- Added left-aligned UI option with sidebar support
+- Added RTL language support
+- Added SVG support for logo images
+- Added small & large logo support
+- Added the ability to change various default Appearance and Search behavior in the Admin Panel
+- Improved the Videos results (video description now available on Desktop and Tablets)
+- Improved the Documentation (now available online)
+- Changed the default Safe Search option to "Moderate"
+- Changed how Safe Ads work (now ads will show for both "Moderate" and "Strict" Safe Search filter)
+- Fixed a rare case where specific results would not load the page
+- Fixed an issue with the Time Instant Answer not updating on time change

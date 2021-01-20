@@ -1,0 +1,34 @@
+How to update from phpSearch v1.6.0 to v2.0.0
+----------------------------------------------------------------------------
+--------------------------------- MySQL ------------------------------------
+Log-in into phpMyAdmin (or your MySQL database) and on the SQL tab run the following queries:
+
+INSERT INTO `settings` (`name`, `value`) VALUES ('news_per_page', '0');
+INSERT INTO `settings` (`name`, `value`) VALUES ('search_answers', '1');
+INSERT INTO `settings` (`name`, `value`) VALUES ('search_related', '1');
+INSERT INTO `settings` (`name`, `value`) VALUES ('search_suggestions', '0');
+INSERT INTO `settings` (`name`, `value`) VALUES ('suggestions_per_ip', '300');
+UPDATE `settings` SET `value` = 10 WHERE `name` = 'web_per_page';
+CREATE TABLE `suggestions_limit` ( `ip` VARCHAR(39) NOT NULL , `count` INT NOT NULL , `updated_at` TIMESTAMP on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`ip`)) ENGINE = InnoDB;
+
+----------------------------------------------------------------------------
+---------------------------------- FTP -------------------------------------
+Upload and replace the following files on your server:
+
+All files except the /app/includes/config.php file.
+
+----------------------------------------------------------------------------
+------------------------------- CHANGELOG ----------------------------------
+- Added News search type
+- Added Auto Suggest for the search box
+- Added Images, Videos and News (Search Answers) results for the Web results
+- Added Related Searches for the Web results
+- Added Image Preview Pane for Images Search
+- Added Query Spelling for the Web Results
+- Added deep URLs when available for the Web Results
+- Added a new Search Filter for Images: License
+- Reworked the header (improved UI and UX)
+- Reworked the filters menu (improved UI and UX)
+- Updated the jQuery library to the latest version
+- Improved the Instant Answer query evaluator (now supports unlimited triggers)
+- Other minor improvements

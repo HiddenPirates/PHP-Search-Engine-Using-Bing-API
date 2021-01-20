@@ -1,0 +1,12 @@
+How to update from phpSearch v4.0.0 to v4.1.0
+----------------------------------------------------------------------------
+---------------------------------- FTP -------------------------------------
+Upload and replace the following files on your server:
+
+/app/controllers/web.php
+
+Or do a clean install.
+
+----------------------------------------------------------------------------
+------------------------------- CHANGELOG ----------------------------------
+- Fixed a rare case where the Next page button would be disabled even when results were available

@@ -1,0 +1,27 @@
+How to update from phpSearch v1.1.0 to v1.2.0
+----------------------------------------------------------------------------
+---------------------------------- FTP -------------------------------------
+Upload and replace the following files on your server:
+
+/app/controllers/admin.php
+/app/controllers/videos.php
+/app/controllers/web.php
+/app/languages/english.php
+/app/libraries/Input.php
+/app/libraries/Session.php
+/app/middleware/UserSettings.php
+
+/public/themes/search/assets/css/style.css
+/public/themes/search/assets/images/icons/* (all files)
+/public/themes/search/assets/js/functions.js
+/public/themes/search/views/images/search_results.php
+/public/themes/search/views/shared/footer.php
+/public/themes/search/views/shared/search_bar.php
+/public/themes/search/views/videos/search_results.php
+
+----------------------------------------------------------------------------
+--------------------------------- Changelog --------------------------------
+- Migrated the iconography to SVG format
+- Improved cookies validation
+- Improved translation
+- Other minor improvements

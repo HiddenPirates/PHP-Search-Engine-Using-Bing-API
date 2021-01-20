@@ -1,0 +1,5 @@
+Documentation is available at:
+https://phpsearch.com/page/documentation
+
+shared on 
+codelist.cc

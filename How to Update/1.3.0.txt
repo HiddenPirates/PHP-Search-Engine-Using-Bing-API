@@ -1,0 +1,21 @@
+How to update from phpSearch v1.2.0 to v1.3.0
+----------------------------------------------------------------------------
+---------------------------------- FTP -------------------------------------
+Upload and replace the following files on your server:
+
+/app/languages/english.php
+
+/public/themes/search/assets/css/style.css
+/public/themes/search/views/admin/content.php
+/public/themes/search/views/home/content.php
+/public/themes/search/views/images/content.php
+/public/themes/search/views/info/content.php
+/public/themes/search/views/preferences/content.php
+/public/themes/search/views/shared/header.php
+/public/themes/search/views/shared/search_bar.php
+/public/themes/search/views/videos/content.php
+/public/themes/search/views/web/content.php
+----------------------------------------------------------------------------
+--------------------------------- Changelog --------------------------------
+- Improved translation
+- Other minor improvements

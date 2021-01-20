@@ -1,0 +1,27 @@
+How to update from phpSearch v1.4.0 to v1.5.0
+-----------------------------------------------------------------------
+---------------------------------- FTP -------------------------------------
+Upload and replace the following files on your server:
+
+/app/controllers/web.php
+/app/includes/info.php
+/app/languages/english.php
+/app/libraries/LoremIpsum.php
+/app/libraries/MorseCode.php
+
+/public/themes/search/assets/css/style.css
+/public/themes/search/assets/js/functions.js
+/public/themes/search/views/web/ia/ (all files)
+/public/themes/search/info.php
+
+----------------------------------------------------------------------------
+------------------------------- CHANGELOG ----------------------------------
+- Added new Instant Answer (lowercase/uppercase): "lowercase example"
+- Added new Instant Answer (screen resolution): "my screen resolution"
+- Added new Instant Answer (leap year): "is 2020 a leap year?"
+- Added new Instant Answer (morse code): "morse code example"
+- Added new Instant Answer (pi): "pi"
+- Added new Instant Answer (unix time): "unix time 0000000000000"
+- Added new Instant Answer (lorem ipsum): "lorem ipsum 10"
+- Fixed an issue with the "date" Instant Answer
+- Other minor improvements

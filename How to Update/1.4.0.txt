@@ -1,0 +1,45 @@
+How to update from phpSearch v1.3.0 to v1.4.0
+----------------------------------------------------------------------------
+--------------------------------- MySQL ------------------------------------
+Log-in into phpMyAdmin (or your MySQL database) and on the SQL tab run the following queries:
+
+INSERT INTO `settings` (`name`, `value`) VALUES ('ads_safe', '0');
+INSERT INTO `settings` (`name`, `value`) VALUES ('search_per_ip', '100');
+INSERT INTO `settings` (`name`, `value`) VALUES ('search_time', '86400');
+INSERT INTO `settings` (`name`, `value`) VALUES ('timezone', '');
+CREATE TABLE `search_limit` ( `ip` VARCHAR(39) NOT NULL , `count` INT NOT NULL , `updated_at` TIMESTAMP on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`ip`)) ENGINE = InnoDB;
+
+----------------------------------------------------------------------------
+---------------------------------- FTP -------------------------------------
+Upload and replace the following files on your server:
+
+/app/controllers/admin.php
+/app/controllers/images.php
+/app/controllers/info.php
+/app/controllers/videos.php
+/app/controllers/web.php
+/app/core/Controller.php
+/app/helpers/salt.php
+/app/includes/info.php
+/app/languages/english.php
+/app/middleware/Authorize.php
+/app/models/Admin.php
+/app/models/SearchLimit.php
+
+/public/themes/search/assets/css/style.css
+/public/themes/search/views/admin/ads.php
+/public/themes/search/views/admin/general.php
+/public/themes/search/views/admin/search.php
+/public/themes/search/views/images/search_results.php
+/public/themes/search/views/preferences/search.php
+/public/themes/search/views/videos/search_results.php
+/public/themes/search/views/web/search_results.php
+/public/themes/search/info.php
+
+----------------------------------------------------------------------------
+------------------------------- CHANGELOG ----------------------------------
+- Added Safe Ads functionality (show ads only when using Strict SafeSearch)
+- Added Searches per IP limitation support
+- Added custom Timezone support
+- Improved security
+- Other minor improvements

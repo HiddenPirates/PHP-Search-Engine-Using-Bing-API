@@ -1,0 +1,17 @@
+How to update from phpSearch v4.1.0 to v4.2.0
+----------------------------------------------------------------------------
+---------------------------------- FTP -------------------------------------
+Upload and replace the following files on your server:
+
+/app/includes/info.php
+
+/public/themes/search/assets/css/style.css
+/public/themes/search/assets/js/jquery.js
+/public/themes/search/info.php
+
+Or do a clean install.
+
+----------------------------------------------------------------------------
+------------------------------- CHANGELOG ----------------------------------
+- Improved RTL support
+- Updated jQuery library to the latest version

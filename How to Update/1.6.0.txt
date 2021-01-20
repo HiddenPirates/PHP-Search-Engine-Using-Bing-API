@@ -1,0 +1,16 @@
+How to update from phpSearch v1.5.0 to v1.6.0
+-----------------------------------------------------------------------
+---------------------------------- FTP -------------------------------------
+Upload and replace the following files on your server:
+
+/app/includes/info.php
+/app/includes/init.php
+
+/public/index.php
+/public/themes/search/views/admin/menu.php
+/public/themes/search/info.php
+
+----------------------------------------------------------------------------
+------------------------------- CHANGELOG ----------------------------------
+- Improved the way sessions are saved
+- Other minor improvements

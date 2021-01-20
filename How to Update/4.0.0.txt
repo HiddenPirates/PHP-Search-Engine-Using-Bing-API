@@ -1,0 +1,34 @@
+How to update from phpSearch v3.0.0 to v4.0.0
+----------------------------------------------------------------------------
+--------------------------------- MySQL ------------------------------------
+Log-in into phpMyAdmin (or your MySQL database) and on the SQL tab run the following queries:
+
+INSERT INTO `settings` (`name`, `value`) VALUES ('search_privacy', '0');
+
+----------------------------------------------------------------------------
+---------------------------------- FTP -------------------------------------
+Upload and replace the following files on your server:
+
+/app/controllers/admin.php
+/app/helpers/format.php
+/app/includes/info.php
+/app/languages/english.php
+/app/libraries/Search.php
+/app/models/Admin.php
+
+/public/themes/search/assets/js/functions.js
+/public/themes/search/views/admin/search.php
+/public/themes/search/views/images/rows.php
+/public/themes/search/views/news/rows.php
+/public/themes/search/views/videos/rows.php
+/public/themes/search/views/web/entities.php
+/public/themes/search/views/wrapper.php
+/public/themes/search/info.php
+/public/image.php
+
+Or do a clean install.
+
+----------------------------------------------------------------------------
+------------------------------- CHANGELOG ----------------------------------
+- Added Search Privacy support (no tracking, private search)
+- Other minor improvements

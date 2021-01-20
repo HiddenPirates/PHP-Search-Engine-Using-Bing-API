@@ -1,0 +1,15 @@
+How to update from phpSearch v4.2.0 to v4.3.0
+----------------------------------------------------------------------------
+---------------------------------- FTP -------------------------------------
+Upload and replace the following files on your server:
+
+/app/includes/info.php
+
+/public/themes/search/home/content.php
+/public/themes/search/info.php
+
+Or do a clean install.
+
+----------------------------------------------------------------------------
+------------------------------- CHANGELOG ----------------------------------
+- Fixed an issue with the logos not pointing to the correct path
